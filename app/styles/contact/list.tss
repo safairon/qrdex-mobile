@@ -1,0 +1,7 @@
+"#header":{
+	text : L('contactList')
+}
+
+"#addContactButton":{
+	title:L('addContact')
+}

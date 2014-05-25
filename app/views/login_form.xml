@@ -1,0 +1,15 @@
+<Alloy>
+	<Window id="loginForm">
+		<View id="loginView" class="vertical">
+			<View id="logoView">
+				<ImageView id="logoImage" />
+			</View>
+			<TextField id="inputUsername" class="input" />
+			<TextField id="inputPassword" class="input"/>
+			<Button id="buttonLogin" class="primaryButton" onClick="actionLogin"/>
+			<Label id="noAccount" class="verySmall"/>
+			<Label id="signUp" class="medium"/>
+			<ActivityIndicator id="activityIndicator" />
+		</View>
+	</Window>
+</Alloy>

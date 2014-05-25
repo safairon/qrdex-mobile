@@ -1,0 +1,8 @@
+<Alloy>
+	<View id="contactList" class="container">
+		<TableView	id="contactTable" dataCollection="Contacts" dataFilter="whereFunction" dataTransform="transformFunction"
+		onClick="tableClick" onLongpress="tableLongPress">
+			<Require src="contact/row"/>
+		</TableView>
+	</View>
+</Alloy>

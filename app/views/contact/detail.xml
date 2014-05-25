@@ -1,0 +1,65 @@
+<Alloy>
+	<Window id="detail" class="container">
+		
+		<View class="header">
+			<View layout="horizontal">
+				<Label class="headerTitle veryLarge" text="{firstName}"/>
+				<View class="separator" width="5"/>
+				<Label class="headerTitle veryLarge" text="{lastName}"/>
+			</View>
+		</View>
+		
+		<View layout="horizontal">
+			<Button id="buttonDelete" class="primaryButton" onClick="actionDelete"/>
+			<View class="separator" width="5"/>
+			<Button id="buttonEdit" class="primaryButton" onClick="actionEdit"/>
+		</View>
+		
+		<View id="infoView" layout="horizontal">
+			<ImageView id="picture"/>
+			<View id="infoBox" class="vertical">
+				<View layout="horizontal">
+					<Label id="mobile" class="large hFieldTitle"/>
+					<Label class="large" text=":"/>
+					<Label class="large hFieldValue" text="{mobilePhone}"/>
+				</View>
+				<View layout="horizontal">
+					<ImageView class="icon24 email hFieldTitle"/>
+					<Label class="large hFieldValue" text="{email}"/>
+				</View>
+			</View>
+		</View>
+		<View id="phoneView" layout="horizontal">
+			<ImageView id="phoneImage" class="icon64 phone"/>
+			<View id="phoneBox" class="vertical">
+				<View class="horizontal labelBox">
+					<Label id="landLine" class="large hFieldTitle"/>
+					<Label class="large" text=":"/>
+					<Label class="large hFieldValue" text="{landLinePhone}"/>
+				</View>
+				<View class="horizontal labelBox">
+					<Label id="business" class="large hFieldTitle"/>
+					<Label class="large" text=":"/>
+					<Label class="large hFieldValue" text="{businessPhone}"/>
+				</View>
+			</View>
+		</View>
+		<View id="eventListView" layout="horizontal" onClick="actionEventList">
+			<ImageView class="icon64 event"/>
+			<Label id="eventListLabel"/>
+		</View>
+		<View id="companyView" layout="horizontal">
+			<ImageView id="companyLogo"/>
+			<View class="companyBox vertical">
+				<View class="vertical labelBox">
+					<Label id="companyLabel" class="large vFieldTitle"/>
+					<Label id="companyName" class="veryLarge vFieldValue"/>
+				</View>
+				<View class="vertical labelBox">
+					<Label id="jobLabel" class="large vFieldTitle"/>
+					<Label class="veryLarge vFieldValue" text="{jobTitle}"/>
+				</View>
+			</View>
+		</View>
+	</Window>
+</Alloy>

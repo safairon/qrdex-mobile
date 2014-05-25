@@ -1,0 +1,30 @@
+"#row":{
+	hasChild:true,
+	borderRadius:5
+}
+
+"#picture":{
+	top:10,
+	left:10,
+	bottom:10,
+	width:100
+}
+
+"#info":{
+	left:120,
+	top:20,
+	width: Ti.UI.SIZE,
+	layout:"vertical"
+}
+
+"Label":{
+	left:0,	
+}
+
+"#name":{
+	color:"#bfad3f"
+}
+
+"#job #company":{
+	color:"#b2b2b2"
+}

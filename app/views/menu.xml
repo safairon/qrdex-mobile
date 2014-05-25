@@ -1,0 +1,7 @@
+<Alloy>
+	<View class="container">
+		<Button id="contactList" onClick="openContactList"/>
+		<Button id="eventList" onClick="openEventList"/>
+		<Button id="logout" onClick="actionLogout"/>
+	</View>
+</Alloy>

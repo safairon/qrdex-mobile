@@ -1,0 +1,9 @@
+<Alloy>
+    <!-- Android -->
+    <Require src="login_form" id="loginForm" platform="android"/>
+    
+    <!-- iPhone -->
+	<NavigationWindow id="login" platform="ios">
+		<Require src="login_form" id="loginForm"/>
+	</NavigationWindow>
+</Alloy>
