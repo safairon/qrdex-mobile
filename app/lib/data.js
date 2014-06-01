@@ -89,7 +89,7 @@ function init() {
 		loadAddresses();
 		loadnMeetings();
 		
-		Alloy.Globals.Sync.startSyncronization();
+		//Alloy.Globals.Sync.startSyncronization();
 	}
 }
 

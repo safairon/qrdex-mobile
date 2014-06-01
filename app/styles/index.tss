@@ -1,7 +1,9 @@
 "#drawer": {
+    fullscreen:true,
+    navBarHidden:true,
+    leftDrawerWidth: '200',
     openDrawerGestureMode: "OPEN_MODE_ALL",
-    closeDrawerGestureMode: "CLOSE_MODE_MARGIN",
-    leftDrawerWidth: '200'
+    closeDrawerGestureMode: "CLOSE_MODE_MARGIN"
 }
 
 "Window": {

@@ -1,5 +1,8 @@
-var id, brand, args = arguments[0] || {};
+var id, brand, deleteDialogTitle, deleteDialogMessage, args = arguments[0] || {};
 if ($model) {
+	deleteDialogTitle = String.format(L('deleteDialogTitle'), L('contact'));
+	deleteDialogMessage = String.format(L('deleteDialogMessage'), $model.getFullName());
+
 	id = $model.id;
 	brand = Alloy.Globals.Data.getBrand($model);
 
@@ -13,8 +16,8 @@ if ($model) {
 function actionDelete() {
 	var dialogs = require('alloy/dialogs');
 	dialogs.confirm({
-		title : String.format(L('deleteDialogTitle'), L('profile')),
-		message : String.format(L('deleteDialogMessage'), $model.getFullName()),
+		title : deleteDialogTitle,
+		message : deleteDialogMessage,
 		callback : function(e) {
 			Alloy.Globals.Data.deleteProfile(id);
 			$.detail.close();

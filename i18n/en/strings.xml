@@ -4,6 +4,7 @@
 	<string name="addContact">Add Contact</string>
 	<string name="business">Business</string>
 	<string name="cancel">Cancel</string>
+	<string name="contact">Contact</string>
 	<string name="contactList">Contact List</string>
 	<string name="contacts">Contacts</string>
 	<string name="delete">Delete</string>
@@ -22,8 +23,8 @@
 	<string name="password">Password</string>
 	<string name="username">Username</string>
 	<string name="view">View</string>
-	<string name="viewEvents">View Events (%1)</string>
+	<string name="viewEvents">View Events %s</string>
 	<string name="workAt">Work At</string>
-	<string name="deleteDialogTitle">Delete %1</string>
-	<string name="deleteDialogMessage">Are you sure you want to delete '%1' ?</string>
+	<string name="deleteDialogTitle">Delete %s</string>
+	<string name="deleteDialogMessage">Are you sure you want to delete %s?</string>
 </resources>

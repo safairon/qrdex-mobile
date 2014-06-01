@@ -40,30 +40,33 @@ function tableClick(e) {
 
 // Long clicks open the options menu, enabling us to view, delete, or cancel the row item
 function tableLongPress(e) {
-	var opts = {
-		cancel : 3,
-		options : [L('view'), L('delete'), L('event'), L('cencel')],
-		selectedIndex : 3,
-		destructive : 0,
-		title : e.row.model.getFullName()
-	};
-	var dialog = Ti.UI.createOptionDialog(opts).show();
-	dialog.addEventListener('click', function(e) {
-		switch(e.index) {
-			case 0:
-				var detailController = Alloy.createController('contact/detail', {
-					$model : e.row.model
-				});
-				detailController.getView().open();
-				break;
-			case 1:
-				Alloy.Globals.Data.deleteProfile(e.row.id);
-				break;
-			case 2:
-				alert(L('eventList'));
-		}
-		dialog.hide();
-	});
+	if (e.row) {
+		var model = e.row.model;
+		var opts = {
+			cancel : 3,
+			options : [L('view'), L('events'), L('delete'), L('cancel')],
+			selectedIndex : 0,
+			destructive : 0,
+			title : model.getFullName()
+		};
+		var dialog = Ti.UI.createOptionDialog(opts);
+		dialog.addEventListener('click', function(e1) {
+			var index = e1.index;
+			switch(index) {
+				case 0:
+					tableClick(e);
+					break;
+				case 1:
+					alert('View Events');
+					break;
+				case 2:
+					Alloy.Globals.Data.deleteProfile(model.id);
+			}
+			dialog.hide();
+			dialog = null;
+		});
+		dialog.show();
+	}
 }
 
 if (OS_ANDROID && Ti.Platform.Android.API_LEVEL >= 11) {
@@ -76,20 +79,4 @@ if (OS_ANDROID && Ti.Platform.Android.API_LEVEL >= 11) {
 	$.contactTable.search = Alloy.createController("util/searchbar").getView();
 }
 
-//create table toolbar
-var toolbarView = Ti.UI.createView({
-	width : Ti.UI.FULL,
-	height : Ti.UI.SIZE,
-});
-var addButton = Ti.UI.createImageView({
-	right : 0,
-	width : 32,
-	height : 32,
-	image : '/image/icon/32/add.png',
-	width : Ti.UI.SIZE
-});
-addButton.addEventListener('click', function() {
-	alert(L('addContact'));
-});
-toolbarView.add(addButton);
-$.contactTable.header = toolbarView;
+contacts.reset(contacts.models);

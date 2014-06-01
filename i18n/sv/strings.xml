@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-	<string name="home">Home</string>
-	<string name="username">Username</string>
-	<string name="password">Password</string>
-	<string name="logout">Logout</string>
-	
-	<string name="eventList">Event List</string>
+	<string name="actionRequired">Action Required</string>
+	<string name="addContact">Add Contact</string>
+	<string name="business">Business</string>
+	<string name="cancel">Cancel</string>
+	<string name="contact">Contact</string>
 	<string name="contactList">Contact List</string>
-	
+	<string name="contacts">Contacts</string>
+	<string name="delete">Delete</string>
+	<string name="deleteContact">Delete Contact</string>
+	<string name="editContact">Edit Contact</string>
+	<string name="eventList">Event List</string>
+	<string name="events">Events</string>
+	<string name="formMissingFields">Please complete all form fields</string>
+	<string name="home">Home</string>
+	<string name="job">Job</string>
+	<string name="landLine">Land Line</string>
+	<string name="login">Login</string>
+	<string name="logout">Logout</string>
+	<string name="mobile">Mobile</string>
+	<string name="noAccountTitle">have no account yet?</string>
+	<string name="password">Password</string>
+	<string name="username">Username</string>
+	<string name="view">View</string>
+	<string name="viewEvents">View Events %s</string>
+	<string name="workAt">Work At</string>
+	<string name="deleteDialogTitle">Delete %s</string>
+	<string name="deleteDialogMessage">Are you sure you want to delete %s?</string>
 </resources>
