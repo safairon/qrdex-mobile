@@ -29,6 +29,18 @@
     showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
 },
 
+".main": {
+    backgroundGradient: {
+		type: "linear",
+		startPoint: { x: "0", y:"0"},
+		endPoint:   { x: "0", y:"100%"},
+		colors: [
+			{ color: "#eeea8f", offset: 0.0 },
+			{ color: "#f6f297", offset: 1.0 }
+		]
+	}
+}
+
 ".container":{
 	layout:"vertical"
 }

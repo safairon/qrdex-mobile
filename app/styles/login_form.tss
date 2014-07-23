@@ -37,6 +37,6 @@
 	text:L("helpCenter")
 }
 
-"#orgetPassword":{
+"#forgetPassword":{
 	text:L("forgetPasswordTitle")
 }

@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="detail" class="container">
+	<Window id="detail" class="container main">
 		
 		<View class="header">
 			<View layout="horizontal">
