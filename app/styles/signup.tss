@@ -1,0 +1,46 @@
+"#signupForm":{
+	title : L('signup')	
+}
+"#newMember":{
+	text:L("newMember")	
+}
+"#inputGroup":{
+	top:50
+}
+"#inputFirstName":{
+	hintText:L('firstName')
+}
+
+"#inputLastName":{
+	hintText:L('lastName')
+}
+
+"#inputEmail":{
+	hintText:L('email')
+}
+
+"#inputPassword":{
+	passwordMask:true,
+	hintText:L('password')
+}
+
+"#inputConfirmPassword":{
+	passwordMask:true,
+	hintText:L('confirmPassword')
+}
+
+"#buttonSignup":{
+	title : L('signup'),
+	top:30	
+}
+
+"#activityIndicator":{
+	height:"20%"
+}
+"#activationInfo":{
+	text:L("activationInfo")
+}
+"#buttonBack":{
+	title : L('back')
+}
+

@@ -2,10 +2,19 @@
 // Frame / Typography
 //
 "Window": {
-    backgroundColor:"#ffffff"
+    backgroundGradient: {
+		type: "linear",
+		startPoint: { x: "0", y:"0"},
+		endPoint:   { x: "0", y:"100%"},
+		colors: [
+			{ color: "#eeea8f", offset: 0.0 },
+			{ color: "#f6f297", offset: 1.0 }
+		]
+	}
 }
 
 "View": {
+	top: 0,
     height: Ti.UI.SIZE,
     width: Ti.UI.SIZE
 }
@@ -20,9 +29,20 @@
     showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
 },
 
+".main": {
+    backgroundGradient: {
+		type: "linear",
+		startPoint: { x: "0", y:"0"},
+		endPoint:   { x: "0", y:"100%"},
+		colors: [
+			{ color: "#eeea8f", offset: 0.0 },
+			{ color: "#f6f297", offset: 1.0 }
+		]
+	}
+}
+
 ".container":{
-	layout:"vertical",
-	backgroundColor:"#ffffff"
+	layout:"vertical"
 }
 
 ".vertical": {
@@ -41,12 +61,10 @@
 // Form
 //
 "TextField": {
-    top: 10,
-    width: "60%",
+    top: 2,
+    width:"95%",
     color:"#ba932a",
-    borderColor:"#ba932a",
-    borderWidth:1,
-    borderRadius:5,
+    borderWidth:0,
     backgroundColor:"#ffffff",
     autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE
 }
@@ -59,17 +77,47 @@
     borderRadius:15
 }
 
+"Label":{
+	color:"#8a7f6b"
+}
+
+".logoView":{
+	width: Ti.UI.FULL,
+	height: "30%"
+}
+
+".logoImage":{
+	bottom:0,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	backgroundColor: "transparent",
+	image:'/image/logo.png'
+}
+
+".logoTitle":{
+	color:"#4d4a53"
+}
+
+
+".inputBar": {
+	left:0,
+	top:0,
+	bottom:0,
+    width: 10,
+    backgroundColor:"#ead311"
+}
+
 
 ".primaryButton":{
-	color:"#ffffff",
-	width: Ti.UI.SIZE,
-	backgroundGradient: {
+	color:"#585437",
+	width: "95%",,
+    backgroundGradient: {
 		type: "linear",
 		startPoint: { x: "0", y:"0"},
 		endPoint:   { x: "0", y:"100%"},
 		colors: [
-			{ color: "#37c8ff", offset: 0.0 },
-			{ color: "#0093c9", offset: 1.0 }
+			{ color: "#ffc021", offset: 0.0 },
+			{ color: "#da9702", offset: 1.0 }
 		]
 	}
 }

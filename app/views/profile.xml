@@ -1,5 +1,5 @@
 <Alloy>
-	<View id="contactDetail" class="container">
+	<View id="contactDetail" class="container main">
 		<Label id="contactid"></Label>
 		<Label id="firstname"></Label>
 		<Label id="lastname"></Label>

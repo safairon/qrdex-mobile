@@ -1,15 +1,30 @@
 <Alloy>
 	<Window id="loginForm">
 		<View id="loginView" class="vertical">
-			<View id="logoView">
-				<ImageView id="logoImage" />
+			<View class="logoView">
+				<ImageView class="logoImage" />
 			</View>
-			<TextField id="inputUsername" class="input" />
-			<TextField id="inputPassword" class="input"/>
+			<Label id="manageContact" class="logoTitle"/>
+			<View id="inputGroup" class="horizontal">
+				<Label class="inputBar"/>
+				<View class="vertical">
+					<TextField id="inputUsername" class="input" />
+					<TextField id="inputPassword" class="input"/>
+				</View>
+			</View>
 			<Button id="buttonLogin" class="primaryButton" onClick="actionLogin"/>
-			<Label id="noAccount" class="verySmall"/>
-			<Label id="signUp" class="medium"/>
+			
 			<ActivityIndicator id="activityIndicator" />
+			
+			<View class="horizontal">
+				<Label id="notMember" class="medium"/>
+				<Label id="signUp" class="medium" onClick="showSignup"/>
+			</View>
+			
+			<View class="horizontal">
+				<Label id="forgetPassword" class="medium"/>
+				<Label id="helpCenter" class="medium"/>
+			</View>
 		</View>
 	</Window>
 </Alloy>
