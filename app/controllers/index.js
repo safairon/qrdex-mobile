@@ -11,6 +11,11 @@ if (! Alloy.Globals.Data.isLoggedIn()) {
 	$.drawer.setCenterWindow(profileView);
 }
 
+function toggle(e) {
+    var fn = 'toggle' + e.source.title + 'Window';
+    $.drawer[fn]();
+}
+
 Ti.App.addEventListener('openMenu', function(e) {
 	$.drawer.toggleLeftWindow();
 });
