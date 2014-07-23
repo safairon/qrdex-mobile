@@ -1,30 +1,12 @@
 "#loginForm":{
-	title : L('login'),
-	backgroundGradient: {
-		type: "linear",
-		startPoint: { x: "0", y:"0"},
-		endPoint:   { x: "0", y:"100%"},
-		colors: [
-			{ color: "#f29700", offset: 0.0 },
-			{ color: "#f1be01", offset: 1.0 }
-		]
-	}	
+	title : L('login')	
 }
-"#logoView":{
-	top:30,
-	backgroundColor: "#FFFFFF",
-	width: Ti.UI.FULL,
-	height: 40
+"#manageContact":{
+	text:L("manageYourImportantContact"),	
 }
-
-"#logoImage":{
-	height: Ti.UI.SIZE,
-	width: Ti.UI.SIZE,
-	top:10,
-	backgroundColor: "transparent",
-	image:'/image/logo.png'
+"#inputGroup":{
+	top:50
 }
-
 "#inputUsername":{
 	hintText:L('username')
 }
@@ -35,18 +17,26 @@
 }
 
 "#buttonLogin":{
-	title : L('login')	
+	title : L('login'),
+	top:30	
 }
 
-"#noAccount":{
-	text:L("noAccountTitle"),
-	color:"#787876"	
+"#activityIndicator":{
+	height:"20%"
+}
+
+"#notMember":{
+	text:L("notMemberTitle"),
 }
 
 "#signUp":{
-	text:L("signUpTitle"),
-	color:"#5e5e5d",
-	font:{
-		fontStyle:"bold"
-	}
+	text:L("signupTitle")
+}
+
+"#helpCenter":{
+	text:L("helpCenter")
+}
+
+"#orgetPassword":{
+	text:L("forgetPasswordTitle")
 }

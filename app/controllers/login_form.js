@@ -35,6 +35,11 @@ function actionLogin(e) {
 	}
 }
 
+function showSignup() {
+	var xpng = require('xpng');
+	xpng.openWin(Alloy.Globals.navgroup, 'signup')
+}
+
 //
 // Navigation
 //
