@@ -62,7 +62,8 @@
 //
 "TextField": {
     top: 2,
-    width:"95%",
+    left:2,
+    right:0,
     color:"#ba932a",
     borderWidth:0,
     backgroundColor:"#ffffff",
@@ -82,7 +83,7 @@
 }
 
 ".logoView":{
-	width: Ti.UI.FULL,
+	width: "30%",
 	height: "30%"
 }
 
@@ -100,10 +101,10 @@
 
 
 ".inputBar": {
+	top:2,
 	left:0,
-	top:0,
-	bottom:0,
-    width: 10,
+	width: 5,
+	height:Ti.UI.FILL,
     backgroundColor:"#ead311"
 }
 
@@ -154,7 +155,7 @@
 
 ".small":{
 	font:{
-		fontSize:"12dp"
+		fontize:"12dp"
 	}
 }
 
@@ -178,7 +179,7 @@
 
 ".header":{
 	height: 50,
-	width: Ti.UI.FULL,
+	width: Ti.UI.FILL,
 	textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
 	backgroundImage:'/image/header-bg.png',
     backgroundRepeat:true

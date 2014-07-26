@@ -5,7 +5,10 @@
 	text:L("manageYourImportantContact"),	
 }
 "#inputGroup":{
-	top:50
+	top:50,
+	width:"95%",
+    layout:"horizontal",
+	height:45	
 }
 "#inputUsername":{
 	hintText:L('username')
@@ -18,7 +21,7 @@
 
 "#buttonLogin":{
 	title : L('login'),
-	top:30	
+	top:"2%"	
 }
 
 "#activityIndicator":{

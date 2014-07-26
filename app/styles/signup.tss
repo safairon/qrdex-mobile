@@ -5,7 +5,10 @@
 	text:L("newMember")	
 }
 "#inputGroup":{
-	top:50
+	top:50,
+	width:"95%",
+    layout:"horizontal",
+	height:115
 }
 "#inputFirstName":{
 	hintText:L('firstName')
