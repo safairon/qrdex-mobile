@@ -53,3 +53,6 @@ function validation() {
 	}
 	return '';
 }
+
+var ui = require('ui');
+ui.autoHideKeybord($.loginView, [$.inputFirstName, $.inputLastName, $.inputEmail, $.inputPassword, $.inputConfirmPassword]); 

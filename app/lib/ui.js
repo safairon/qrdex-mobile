@@ -1,14 +1,13 @@
-exports.openWindow = function(controller) {
-	var win = controller.getView();
-
-	// open the window
-	if (usesNavGroup) {
-		if (OS_MOBILEWEB) {
-			Alloy.Globals.navgroup.open(win);
-		} else {
-			Alloy.Globals.navgroup.openWindow(win);
+exports.autoHideKeybord = function(view, textFields) {
+	view.addEventListener('click', function(e) {
+		if (!_.contains(textFields, e.source)) {
+			if (Ti.Platform.osname == 'android') {
+				Ti.UI.Android.hideSoftKeyboard();
+			} else {
+				_.each(textFields, function(textField) {
+					textField.blur();
+				});
+			}
 		}
-	} else if (OS_ANDROID) {
-		win.open();
-	}
+	});
 };

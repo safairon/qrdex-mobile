@@ -63,3 +63,6 @@ if (OS_ANDROID) {
 		activity.finish();
 	});
 }
+
+var ui = require('ui');
+ui.autoHideKeybord($.loginView, [$.inputUsername, $.inputPassword]);
