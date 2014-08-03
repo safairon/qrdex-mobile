@@ -1,26 +1,28 @@
 <Alloy>
 	<Window id="signupForm" class="vertical">
-		<View class="logoView">
-			<ImageView class="logoImage" />
-		</View>
-		<View id="signupView" class="vertical">
-			<Label id="newMember" class="logoTitle"/>
-			<View id="inputGroup" class="horizontal">
-				<Label class="inputBar"/>
-				<View class="vertical">
-					<TextField id="inputFirstName" class="input" />
-					<TextField id="inputLastName" class="input" />
-					<TextField id="inputEmail" class="input" />
-					<TextField id="inputPassword" class="input" />
-					<TextField id="inputConfirmPassword" class="input"/>
-				</View>
+		<ScrollView id="signupView" class="vertical">
+			<View class="logoView">
+				<ImageView class="logoImage" />
 			</View>
-			<Button id="buttonSignup" class="primaryButton" onClick="actionSignup"/>
-			<ActivityIndicator id="activityIndicator" />
-		</View>
-		<View id="activationView" class="vertical" visible="falase">
-			<Label id="activationInfo" class="logoTitle"/>
-			<Button id="buttonBack" class="primaryButton" onClick="actionClose"/>
-		</View>
+			<View id="signupFormView" class="vertical">
+				<Label id="newMember" class="logoTitle"/>
+				<View class="horizontal inputGroup">
+					<Label id="inputBar" class="inputBar"/>
+					<View class="vertical">
+						<TextField id="inputFirstName" class="input" />
+						<TextField id="inputLastName" class="input" />
+						<TextField id="inputEmail" class="input" />
+						<TextField id="inputPassword" class="input" />
+						<TextField id="inputConfirmPassword" class="input"/>
+					</View>
+				</View>
+				<Button id="buttonSignup" class="primaryButton" onClick="actionSignup"/>
+				<ActivityIndicator id="activityIndicator" />
+			</View>
+			<View id="activationView" class="vertical" visible="falase">
+				<Label id="activationInfo" class="logoTitle"/>
+				<Button id="buttonBack" class="primaryButton" onClick="actionClose"/>
+			</View>
+		</ScrollView>
 	</Window>
 </Alloy>

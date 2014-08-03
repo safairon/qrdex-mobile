@@ -25,7 +25,7 @@ function actionSignup(e) {
 			$.buttonSignup.enabled = true;
 
 			if (response.result === 'ok') {
-				$.signupForm.remove($.signupView);
+				$.signupForm.remove($.signupFormView);
 				$.activationView.setVisible(true);
 			} else {
 				$.inputPassword.value = '';
@@ -55,4 +55,4 @@ function validation() {
 }
 
 var ui = require('ui');
-ui.autoHideKeybord($.loginView, [$.inputFirstName, $.inputLastName, $.inputEmail, $.inputPassword, $.inputConfirmPassword]); 
+ui.autoHideKeybord($.signupView, [$.inputFirstName, $.inputLastName, $.inputEmail, $.inputPassword, $.inputConfirmPassword]); 
