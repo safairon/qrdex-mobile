@@ -7,7 +7,7 @@
 			<View id="signupFormView" class="vertical">
 				<Label id="newMember" class="logoTitle"/>
 				<View class="horizontal inputGroup">
-					<Label id="inputBar" class="inputBar"/>
+					<View id="inputBar" class="inputBar"/>
 					<View class="vertical">
 						<TextField id="inputFirstName" class="input" />
 						<TextField id="inputLastName" class="input" />

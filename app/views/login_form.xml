@@ -1,12 +1,12 @@
 <Alloy>
 	<Window id="loginForm">
-		<View id="loginView" class="vertical">
+		<ScrollView id="loginView" class="vertical">
 			<View class="logoView">
 				<ImageView class="logoImage" />
 			</View>
 			<Label id="manageContact" class="logoTitle"/>
-			<View id="inputGroup" class="horizontal">
-				<Label class="inputBar"/>
+			<View class="horizontal inputGroup">
+				<View id="inputBar" class="inputBar"/>
 				<View class="vertical">
 					<TextField id="inputUsername" class="input" />
 					<TextField id="inputPassword" class="input"/>
@@ -25,6 +25,6 @@
 				<Label id="forgetPassword" class="medium"/>
 				<Label id="helpCenter" class="medium"/>
 			</View>
-		</View>
+		</ScrollView>
 	</Window>
 </Alloy>

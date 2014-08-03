@@ -13,6 +13,10 @@
 	}
 }
 
+"ScrollView":{
+	width: Ti.UI.FILL
+}
+
 "View": {
 	top: 0,
     height: Ti.UI.SIZE,
@@ -62,12 +66,20 @@
 //
 "TextField": {
     top: 2,
-    left:2,
-    right:0,
+    height:40,
     color:"#ba932a",
     borderWidth:0,
     backgroundColor:"#ffffff",
     autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE
+}
+
+"TextField[platform=android]": {
+    width:"95%"
+}
+
+"TextField[platform=ios]": {
+	left:"1",
+	right:"2%"
 }
 
 "Button": {
@@ -99,19 +111,24 @@
 	color:"#4d4a53"
 }
 
+".inputGroup":{
+	top:"10%",
+	height:Ti.UI.SIZE	
+}
 
 ".inputBar": {
 	top:2,
-	left:0,
 	width: 5,
-	height:Ti.UI.FILL,
-    backgroundColor:"#ead311"
+	backgroundColor:"#ead311"
 }
 
+".inputBar[platform=ios]": {
+	left:"2%"
+}
 
 ".primaryButton":{
 	color:"#585437",
-	width: "95%",,
+	width:"95%",
     backgroundGradient: {
 		type: "linear",
 		startPoint: { x: "0", y:"0"},
@@ -122,6 +139,7 @@
 		]
 	}
 }
+
 
 //
 // Components
@@ -149,31 +167,31 @@
 
 ".verySmall":{
 	font:{
-		fontSize:"10dp"
+		fontSize:"10sp"
 	}
 }
 
 ".small":{
 	font:{
-		fontize:"12dp"
+		fontize:"12sp"
 	}
 }
 
 ".medium":{
 	font:{
-		fontSize:"14dp"
+		fontSize:"14sp"
 	}
 }
 
 ".large":{
 	font:{
-		fontSize:"16dp"
+		fontSize:"16sp"
 	}
 }
 
 ".veryLarge":{
 	font:{
-		fontSize:"18dp"
+		fontSize:"18sp"
 	}
 }
 

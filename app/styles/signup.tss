@@ -4,11 +4,8 @@
 "#newMember":{
 	text:L("newMember")	
 }
-"#inputGroup":{
-	top:50,
-	width:"95%",
-    layout:"horizontal",
-	height:115
+"#inputBar":{
+	height:208
 }
 "#inputFirstName":{
 	hintText:L('firstName')
@@ -46,4 +43,3 @@
 "#buttonBack":{
 	title : L('back')
 }
-

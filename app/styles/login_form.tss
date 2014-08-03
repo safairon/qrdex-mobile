@@ -4,11 +4,8 @@
 "#manageContact":{
 	text:L("manageYourImportantContact"),	
 }
-"#inputGroup":{
-	top:50,
-	width:"95%",
-    layout:"horizontal",
-	height:45	
+"#inputBar":{
+	height:84
 }
 "#inputUsername":{
 	hintText:L('username')
@@ -18,14 +15,13 @@
 	passwordMask:true,
 	hintText:L('password')
 }
-
 "#buttonLogin":{
 	title : L('login'),
 	top:"2%"	
 }
 
 "#activityIndicator":{
-	height:"20%"
+	height:"5%"
 }
 
 "#notMember":{
