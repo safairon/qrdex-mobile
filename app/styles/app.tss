@@ -27,8 +27,7 @@
 
 "ScrollView":{
 	top: 0,
-	width: Ti.UI.FILL,
-	height: "50%"
+	width: Ti.UI.FILL
 }
 
 "View": {
