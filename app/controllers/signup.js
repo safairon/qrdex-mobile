@@ -55,4 +55,8 @@ function validation() {
 }
 
 var ui = require('ui');
-ui.autoHideKeybord($.signupView, [$.inputFirstName, $.inputLastName, $.inputEmail, $.inputPassword, $.inputConfirmPassword]); 
+ui.autoHideKeybord($.signupView, [$.inputFirstName, $.inputLastName, $.inputEmail, $.inputPassword, $.inputConfirmPassword]);
+
+$.inputConfirmPassword.addEventListener('focus', function(e) {
+	$.signupView.scrollTo(0,80);
+}); 

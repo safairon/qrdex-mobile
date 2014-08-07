@@ -1,45 +1,48 @@
+"#signupView":{
+	contentHeight:"auto"
+}
 "#signupForm":{
-	title : L('signup')	
+	title: L( 'signup')
 }
 "#newMember":{
-	text:L("newMember")	
+	text:L( "newMember")
 }
 "#inputBar":{
-	height:208
+	height: 208
 }
 "#inputFirstName":{
-	hintText:L('firstName')
+	hintText:L( 'firstName')
 }
 
 "#inputLastName":{
-	hintText:L('lastName')
+	hintText:L( 'lastName')
 }
 
 "#inputEmail":{
-	hintText:L('email')
+	hintText:L( 'email')
 }
 
 "#inputPassword":{
-	passwordMask:true,
-	hintText:L('password')
+	passwordMask: true,
+	hintText:L( 'password')
 }
 
 "#inputConfirmPassword":{
-	passwordMask:true,
-	hintText:L('confirmPassword')
+	passwordMask: true,
+	hintText:L( 'confirmPassword')
 }
 
 "#buttonSignup":{
-	title : L('signup'),
-	top:30	
+	title: L( 'signup'),
+	top: 30
 }
 
 "#activityIndicator":{
-	height:"20%"
+	height: "5%"
 }
 "#activationInfo":{
-	text:L("activationInfo")
+	text:L( "activationInfo")
 }
 "#buttonBack":{
-	title : L('back')
+	title: L( 'back')
 }

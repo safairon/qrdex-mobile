@@ -2,96 +2,122 @@
 // Frame / Typography
 //
 "Window": {
-    backgroundGradient: {
+	backgroundGradient: {
 		type: "linear",
-		startPoint: { x: "0", y:"0"},
-		endPoint:   { x: "0", y:"100%"},
+		startPoint: {
+			x: "0",
+			y: "0"
+		},
+		endPoint:   {
+			x: "0",
+			y: "100%"
+		},
 		colors: [
-			{ color: "#eeea8f", offset: 0.0 },
-			{ color: "#f6f297", offset: 1.0 }
+			{
+				color: "#eeea8f",
+				offset: 0.0
+			},
+			{
+				color: "#f6f297",
+				offset: 1.0
+			}
 		]
 	}
 }
 
 "ScrollView":{
-	width: Ti.UI.FILL
+	top: 0,
+	width: Ti.UI.FILL,
+	height: "50%"
 }
 
 "View": {
 	top: 0,
-    height: Ti.UI.SIZE,
-    width: Ti.UI.SIZE
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
 }
 
 "TableView": {
-    height: Ti.UI.SIZE,
-    top: 0
+	height: Ti.UI.SIZE,
+	top: 0
 }
 
 "MenuItem": {
-    color: "#000",
-    showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
+	color: "#000",
+	showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM
 },
 
 ".main": {
-    backgroundGradient: {
+	backgroundGradient: {
 		type: "linear",
-		startPoint: { x: "0", y:"0"},
-		endPoint:   { x: "0", y:"100%"},
+		startPoint: {
+			x: "0",
+			y: "0"
+		},
+		endPoint:   {
+			x: "0",
+			y: "100%"
+		},
 		colors: [
-			{ color: "#eeea8f", offset: 0.0 },
-			{ color: "#f6f297", offset: 1.0 }
+			{
+				color: "#eeea8f",
+				offset: 0.0
+			},
+			{
+				color: "#f6f297",
+				offset: 1.0
+			}
 		]
 	}
 }
 
 ".container":{
-	layout:"vertical"
+	layout: "vertical"
 }
 
 ".vertical": {
-	layout:"vertical" 
+	layout: "vertical"
 }
 
 ".horizontal": {
-	layout:"horizontal" 
+	layout: "horizontal"
 }
 
 ".emptyList":{
-	text : L('emptyList')
+	text: L( 'emptyList')
 }
 
 //
 // Form
 //
 "TextField": {
-    top: 2,
-    height:40,
-    color:"#ba932a",
-    borderWidth:0,
-    backgroundColor:"#ffffff",
-    autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE
+	top: 2,
+	height: 40,
+	color: "#ba932a",
+	borderWidth: 0,
+	backgroundColor: "#ffffff",
+	autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE
 }
 
 "TextField[platform=android]": {
-    width:"95%"
+	width: "95%"
 }
 
 "TextField[platform=ios]": {
-	left:"1",
-	right:"2%"
+	left: "1",
+	right: "2%"
 }
 
 "Button": {
-    top: 10,
-    bottom: 10,
-    height: Ti.UI.SIZE,
-    width: Ti.UI.SIZE,
-    borderRadius:15
+	top: 10,
+	bottom: 10,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	borderRadius: 15
 }
 
 "Label":{
-	color:"#8a7f6b"
+	color: "#8a7f6b"
 }
 
 ".logoView":{
@@ -100,42 +126,55 @@
 }
 
 ".logoImage":{
-	bottom:0,
+	bottom: 0,
 	height: Ti.UI.SIZE,
 	width: Ti.UI.SIZE,
 	backgroundColor: "transparent",
-	image:'/image/logo.png'
+	image: '/image/logo.png'
 }
 
 ".logoTitle":{
-	color:"#4d4a53"
+	color: "#4d4a53"
 }
 
 ".inputGroup":{
-	top:"10%",
-	height:Ti.UI.SIZE	
+	top: "10%",
+	height: Ti.UI.SIZE
 }
 
 ".inputBar": {
-	top:2,
+	top: 2,
 	width: 5,
-	backgroundColor:"#ead311"
+	backgroundColor: "#ead311"
 }
 
 ".inputBar[platform=ios]": {
-	left:"2%"
+	left: "2%"
 }
 
 ".primaryButton":{
-	color:"#585437",
-	width:"95%",
-    backgroundGradient: {
+	color: "#585437",
+	width: "95%",
+	height: 40,
+	backgroundGradient: {
 		type: "linear",
-		startPoint: { x: "0", y:"0"},
-		endPoint:   { x: "0", y:"100%"},
+		startPoint: {
+			x: "0",
+			y: "0"
+		},
+		endPoint:   {
+			x: "0",
+			y: "100%"
+		},
 		colors: [
-			{ color: "#ffc021", offset: 0.0 },
-			{ color: "#da9702", offset: 1.0 }
+			{
+				color: "#ffc021",
+				offset: 0.0
+			},
+			{
+				color: "#da9702",
+				offset: 1.0
+			}
 		]
 	}
 }
@@ -145,98 +184,98 @@
 // Components
 //
 "#activityIndicator": {
-    height: Ti.UI.SIZE,
-    width: Ti.UI.SIZE,
-    top: 20
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	top: 20
 }
 
 "#activityIndicator[platform=ios]": {
-    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK
+	style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK
 }
 
 "#activityIndicator[platform=android]": {
-    style: Ti.UI.ActivityIndicatorStyle.PLAIN
+	style: Ti.UI.ActivityIndicatorStyle.PLAIN
 }
 
 "#labelNoRecords": {
-    height: Ti.UI.SIZE,
-    width: Ti.UI.SIZE,
-    visible: false,
-    top: 20
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	visible: false,
+	top: 20
 }
 
 ".verySmall":{
 	font:{
-		fontSize:"10sp"
+		fontSize: "10sp"
 	}
 }
 
 ".small":{
 	font:{
-		fontize:"12sp"
+		fontize: "12sp"
 	}
 }
 
 ".medium":{
 	font:{
-		fontSize:"14sp"
+		fontSize: "14sp"
 	}
 }
 
 ".large":{
 	font:{
-		fontSize:"16sp"
+		fontSize: "16sp"
 	}
 }
 
 ".veryLarge":{
 	font:{
-		fontSize:"18sp"
+		fontSize: "18sp"
 	}
 }
 
 ".header":{
 	height: 50,
 	width: Ti.UI.FILL,
-	textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
-	backgroundImage:'/image/header-bg.png',
-    backgroundRepeat:true
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	backgroundImage: '/image/header-bg.png',
+	backgroundRepeat: true
 }
 
 ".headerTitle":{
-	color:"#817647",
+	color: "#817647",
 	font:{
-		fontStyle:"bold"
+		fontStyle: "bold"
 	}
 }
 
 ".icon24":{
-	width:24,
-	height:24
+	width: 24,
+	height: 24
 }
 
 ".icon48":{
-	width:48,
-	height:48
+	width: 48,
+	height: 48
 }
 
 ".icon64":{
-	width:64,
-	height:64
+	width: 64,
+	height: 64
 }
 
 ".email":{
-	image:'/image/icon/email.png'
+	image: '/image/icon/email.png'
 }
 
 ".event":{
-	image:'/image/icon/event.png'
+	image: '/image/icon/event.png'
 }
 
 ".address":{
-	image:'/image/icon/address.png'
+	image: '/image/icon/address.png'
 }
 
 ".phone":{
-	image:'/image/icon/phone.png'
+	image: '/image/icon/phone.png'
 }

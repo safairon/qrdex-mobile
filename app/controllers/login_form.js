@@ -66,3 +66,7 @@ if (OS_ANDROID) {
 
 var ui = require('ui');
 ui.autoHideKeybord($.loginView, [$.inputUsername, $.inputPassword]);
+
+$.inputPassword.addEventListener('focus', function(e) {
+	$.loginView.scrollTo(0,80);
+}); 
