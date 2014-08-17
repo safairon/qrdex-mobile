@@ -22,7 +22,7 @@
 			</View>
 			
 			<View class="horizontal">
-				<Label id="forgetPassword" class="medium"/>
+				<Label id="forgetPassword" class="medium" onClick="forgetPasswordAction">
 				<Label id="helpCenter" class="medium"/>
 			</View>
 		</ScrollView>

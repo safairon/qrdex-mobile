@@ -15,10 +15,11 @@ function actionSignup(e) {
 
 		var AppServer = Alloy.Globals.Server;
 		var params = {
-			fisrtName : $.inputFirstName.value,
+			firstName : $.inputFirstName.value,
 			lastName : $.inputLastName.value,
 			email : $.inputEmail.value,
-			password : $.inputPassword.value
+			password : $.inputPassword.value,
+			confirmPassword : $.inputConfirmPassword.value
 		};
 		AppServer.signup(params, function(response) {
 			$.activityIndicator.hide();
@@ -30,7 +31,7 @@ function actionSignup(e) {
 			} else {
 				$.inputPassword.value = '';
 				$.inputConfirmPassword.value = '';
-				alert(L('error', 'Error') + ':\n' + response.msg);
+				alert(L('error', 'Error') + ':\n' + response.message);
 			}
 		});
 	}

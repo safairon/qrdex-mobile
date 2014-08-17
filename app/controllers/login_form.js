@@ -29,7 +29,7 @@ function actionLogin(e) {
 				}
 			} else {
 				$.inputPassword.value = '';
-				alert(L('error', 'Error') + ':\n' + response.msg);
+				alert(L('error', 'Error') + ':\n' + response.message);
 			}
 		});
 	}
@@ -40,6 +40,9 @@ function showSignup() {
 	xpng.openWin(Alloy.Globals.navgroup, 'signup');
 }
 
+function forgetPasswordAction() {
+	Ti.Platform.openURL("http://qrdex.com/forget");
+}
 //
 // Navigation
 //

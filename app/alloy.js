@@ -19,5 +19,5 @@ require('constants');
 
 Alloy.Globals.Sync = require('sync');
 Alloy.Globals.Data = require('data');
-Alloy.Globals.Server = require('mock');
-//Alloy.Globals.Server = require('server');
+// Alloy.Globals.Server = require('mock');
+Alloy.Globals.Server = require('server');

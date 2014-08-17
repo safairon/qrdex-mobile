@@ -1,9 +1,14 @@
-var host = 'http://178.162.207.160:8080/ws/';
-var logintUrl = host + 'login';
+var host = 'http://192.168.0.51:8080/ws/';
+var signupUrl = host + 'profile';
+var logintUrl = host + 'authentication/login';
 var logoutUrl = host + 'logout';
 var updateUrl = host + 'app/update';
 var commitUrl = host + 'app/commit';
 var uploadUrl = host + 'app/upload';
+
+exports.signup = function(params, callback) {
+	createRequest('POST', signupUrl, params, callback);
+};
 
 exports.login = function(username, password, callback) {
 	var params = {
@@ -50,8 +55,9 @@ function createRequest(method, url, params, callback) {
 
 	xhr.onload = function(e) {
 		if (callback) {
-			res = this.responseText ? JSON.pars(this.responseText) : {};
-			callback(res);
+			callback({
+				result : 'ok'
+			});
 		}
 	};
 
@@ -66,24 +72,22 @@ function createRequest(method, url, params, callback) {
 			}
 		} else {
 			Ti.API.error(this.responseText);
+			// var response = JSON.parse(this.responseText);
 			callback({
-				result : 'error',
-				message : callback
+				result : "error",
+				// code : response.code,
+				// message : response.description
+				message : this.responseText
 			});
 		}
 	};
 
-	xhr.timeout = 5000;
+	xhr.timeout = 20000;
 
 	sendRequest(xhr, method, url, params);
 
 	return xhr;
 }
-
-function sendRequest(xhr, method, url, params) {
-	xhr.open(method, params);
-	xhr.send();
-};
 
 function reLogin(callbacl) {
 	var params = {
@@ -92,4 +96,11 @@ function reLogin(callbacl) {
 	};
 
 	var xhr = createXHR('POST', logintUrl, params, callback);
+};
+
+function sendRequest(xhr, method, url, params) {
+	xhr.open(method, url);
+	xhr.setRequestHeader("Content-Type", "application/json");
+	xhr.setRequestHeader("Cache-Control", "no-cache");
+	xhr.send(JSON.stringify(params));
 };
