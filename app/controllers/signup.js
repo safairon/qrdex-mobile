@@ -26,7 +26,7 @@ function actionSignup(e) {
 			$.buttonSignup.enabled = true;
 
 			if (response.result === 'ok') {
-				$.signupForm.remove($.signupFormView);
+				$.signupView.remove($.signupFormView);
 				$.activationView.setVisible(true);
 			} else {
 				$.inputPassword.value = '';

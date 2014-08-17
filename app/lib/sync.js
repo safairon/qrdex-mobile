@@ -39,10 +39,12 @@ exports.clearDatabase = function() {
 exports.update = function(callback) {
 	var lastUpdate = Ti.App.Properties.getInt('lastUpdate', 0);
 	Alloy.Globals.Server.update(lastUpdate, function(res) {
-		Ti.App.Properties.setInt('lastUpdate', res.timestamp);
-		applyChangeList(res.changeList);
-		if (callback) {
-			callback();
+		if (res && res.timestamp && res.changeList) {
+			Ti.App.Properties.setInt('lastUpdate', res.timestamp);
+			applyChangeList(res.changeList);
+			if (callback) {
+				callback();
+			}
 		}
 	});
 };
