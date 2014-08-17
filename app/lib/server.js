@@ -1,4 +1,4 @@
-var host = 'http://192.168.0.51:8080/ws/';
+var host = 'http://37.220.11.236:8180/ws/';
 var signupUrl = host + 'profile';
 var logintUrl = host + 'authentication/login';
 var logoutUrl = host + 'logout';
@@ -55,9 +55,10 @@ function createRequest(method, url, params, callback) {
 
 	xhr.onload = function(e) {
 		if (callback) {
-			callback({
+			var response = {
 				result : 'ok'
-			});
+			};
+			callback(response);
 		}
 	};
 
@@ -69,15 +70,25 @@ function createRequest(method, url, params, callback) {
 				});
 			} else {
 				Ti.fireEvent('AuthenticationError');
+				callback({
+					result : "error"
+				});
 			}
 		} else {
 			Ti.API.error(this.responseText);
-			// var response = JSON.parse(this.responseText);
+			var response;
+			try {
+				response = JSON.parse(this.responseText);
+			} catch(e) {
+				response = {
+					code : this.status,
+					description : 'Unknown Error'
+				};
+			}
 			callback({
 				result : "error",
-				// code : response.code,
-				// message : response.description
-				message : this.responseText
+				code : response.code,
+				message : response.description
 			});
 		}
 	};

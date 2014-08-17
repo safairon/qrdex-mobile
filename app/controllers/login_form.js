@@ -29,7 +29,7 @@ function actionLogin(e) {
 				}
 			} else {
 				$.inputPassword.value = '';
-				alert(L('error', 'Error') + ':\n' + response.message);
+				alert(L('invalidUsernameOrPassword'));
 			}
 		});
 	}

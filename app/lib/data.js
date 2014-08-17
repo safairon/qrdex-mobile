@@ -10,28 +10,24 @@ exports.login = function(username, password, callback) {
 			Ti.App.Properties.setString('password', password);
 			Alloy.Globals.Sync.update(function() {
 				init();
-				callback({
-					result : 'ok'
-				});
 			});
-		} else {
-			callback(res);
 		}
+		callback(res);
 	});
 };
 
 exports.logout = function(callback) {
 	loggedIn = false;
-	
+
 	Alloy.Globals.Server.logout();
-	
+
 	Alloy.Globals.Sync.stopSyncronization();
 	Alloy.Globals.Sync.clearDatabase();
-	
+
 	Ti.App.Properties.removeProperty('username');
 	Ti.App.Properties.removeProperty('password');
 	Ti.App.Properties.removeProperty('lastUpdate');
-	
+
 	callback();
 };
 
@@ -88,7 +84,7 @@ function init() {
 		loadContacts();
 		loadAddresses();
 		loadnMeetings();
-		
+
 		//Alloy.Globals.Sync.startSyncronization();
 	}
 }

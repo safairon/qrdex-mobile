@@ -28,6 +28,7 @@
 	<string name="landLine">Land Line</string>
 	<string name="login">Login</string>
 	<string name="logout">Logout</string>
+	<string name="invalidUsernameOrPassword">Invalid username or password</string>
 	<string name="manageYourImportantContact">Manage Your Important Contact</string>	
 	<string name="mobile">Mobile</string>
 	<string name="newMember">New Member</string>
