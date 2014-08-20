@@ -1,4 +1,5 @@
-var host = 'http://37.220.11.236:8180/ws/';
+// var host = 'http://37.220.11.236:8180/ws/';
+var host = 'http://192.168.0.51:8080/ws/';
 var signupUrl = host + 'profile';
 var logintUrl = host + 'authentication/login';
 var logoutUrl = host + 'logout';

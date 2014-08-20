@@ -1,22 +1,14 @@
 "#drawer": {
-    fullscreen:true,
-    navBarHidden:true,
-    leftDrawerWidth: '200',
-    openDrawerGestureMode: "OPEN_MODE_ALL",
-    closeDrawerGestureMode: "CLOSE_MODE_MARGIN"
+	fullscreen: true,
+	navBarHidden: true,
+	leftDrawerWidth: '600',
+	shadowWidth:"10",
+	openDrawerGestureMode: "OPEN_MODE_ALL",
+	closeDrawerGestureMode: "CLOSE_MODE_MARGIN",
+	animationMode: "ANIMATION_NONE"
 }
 
-"Window": {
-	backgroundColor: "#fff"
-},
-
-"Label": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	color: "#000",
-	font: {
-		fontSize: 20,
-		fontFamily: 'Helvetica Neue'
-	},
-	textAlign: 'center'
-} 
+"#menu":{
+	height: Ti.UI.FILL,
+	backgroundColor: "#ece733"
+}

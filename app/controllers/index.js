@@ -23,8 +23,7 @@ Ti.App.addEventListener('openMenu', function(e) {
 function profileItem() {
 	var row = Titanium.UI.createTableViewRow({
 		title : L('profile'),
-		hasChild : true,
-		leftImage : '/image/icon/32/home.png',
+		hasChild : true
 	});
 
 	row.addEventListener('click', function(e) {
@@ -38,8 +37,7 @@ function profileItem() {
 function contactsItem() {
 	var row = Titanium.UI.createTableViewRow({
 		title : L('contacts'),
-		hasChild : true,
-		leftImage : '/image/icon/32/contact.png',
+		hasChild : true
 	});
 
 	row.addEventListener('click', function(e) {
@@ -53,8 +51,20 @@ function contactsItem() {
 function eventsItem() {
 	var row = Titanium.UI.createTableViewRow({
 		title : L('events'),
-		hasChild : true,
-		leftImage : '/image/icon/32/event.png',
+		hasChild : true
+	});
+
+	row.addEventListener('click', function(e) {
+		$.drawer.closeLeftWindow();
+	});
+
+	return row;
+}
+
+function settingItem() {
+	var row = Titanium.UI.createTableViewRow({
+		title : L('setting'),
+		hasChild : true
 	});
 
 	row.addEventListener('click', function(e) {
@@ -67,8 +77,7 @@ function eventsItem() {
 function logoutItem() {
 	var row = Titanium.UI.createTableViewRow({
 		title : L('logout'),
-		hasChild : true,
-		leftImage : '/image/icon/32/logout.png',
+		hasChild : true
 	});
 
 	row.addEventListener('click', function(e) {
