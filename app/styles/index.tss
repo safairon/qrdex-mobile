@@ -1,14 +1,31 @@
 "#drawer": {
 	fullscreen: true,
 	navBarHidden: true,
-	leftDrawerWidth: '600',
+	leftDrawerWidth: '200',
 	shadowWidth:"10",
 	openDrawerGestureMode: "OPEN_MODE_ALL",
 	closeDrawerGestureMode: "CLOSE_MODE_MARGIN",
 	animationMode: "ANIMATION_NONE"
 }
 
-"#menu":{
+"#center":{
+	fullscreen: true,
+	navBarHidden: true,
+	backgroundColor: "#f1f1f1"
+}
+
+"#slider":{
 	height: Ti.UI.FILL,
 	backgroundColor: "#ece733"
+}
+
+"#menu":{
+	top:20,
+	left:0,
+	right:10,
+	backgroundColor: 'transparent'
+}
+
+"#header":{
+	width:Ti.UI.FILL
 }

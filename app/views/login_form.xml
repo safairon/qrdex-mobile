@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="loginForm">
+	<Window id="loginForm" class="login">
 		<ScrollView id="loginView" class="vertical">
 			<View class="logoView">
 				<ImageView class="logoImage" />

@@ -3,22 +3,31 @@ var contactsView = Alloy.createController('contact/list').getView();
 
 if (! Alloy.Globals.Data.isLoggedIn()) {
 	Alloy.createController('login');
-} else {
+} else { 
 	$.drawer.open();
 	
 	$.menu.setData([profileItem(), contactsItem(), eventsItem(), logoutItem()]);
 	
-	$.drawer.setCenterWindow(profileView);
+	changeCenterView(profileView);
 }
 
-function toggle(e) {
-    var fn = 'toggle' + e.source.title + 'Window';
-    $.drawer[fn]();
+function toggleMenu(e){
+	$.drawer.toggleLeftWindow();
 }
 
-Ti.App.addEventListener('openMenu', function(e) {
+Ti.App.addEventListener('openMenu', function(e){
 	$.drawer.toggleLeftWindow();
 });
+
+function changeCenterView(view){
+	// var lastView = $.contentView.children[0];
+	$.drawer.closeLeftWindow();
+	
+	// if(lastView != undefined){
+		// $.contentView.remove(lastView);
+	// }	
+	$.contentView.add(view);
+}
 
 function profileItem() {
 	var row = Titanium.UI.createTableViewRow({
@@ -27,8 +36,7 @@ function profileItem() {
 	});
 
 	row.addEventListener('click', function(e) {
-		$.drawer.setCenterWindow(profileView);
-		$.drawer.closeLeftWindow();
+		changeCenterView(profileView);
 	});
 
 	return row;
@@ -41,8 +49,7 @@ function contactsItem() {
 	});
 
 	row.addEventListener('click', function(e) {
-		$.drawer.setCenterWindow(contactsView);
-		$.drawer.closeLeftWindow();
+		changeCenterView(contactsView);
 	});
 
 	return row;
@@ -55,7 +62,7 @@ function eventsItem() {
 	});
 
 	row.addEventListener('click', function(e) {
-		$.drawer.closeLeftWindow();
+		changeCenterView(contactsView);
 	});
 
 	return row;
