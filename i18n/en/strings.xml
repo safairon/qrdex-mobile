@@ -34,6 +34,7 @@
 	<string name="newMember">New Member</string>
 	<string name="notMemberTitle">no a member?</string>
 	<string name="password">Password</string>
+	<string name="setting">Setting</string>
 	<string name="signup">Sign Up</string>
 	<string name="signupTitle">Sign Up now!</string>
 	<string name="username">Username</string>

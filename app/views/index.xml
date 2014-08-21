@@ -1,19 +1,25 @@
 <Alloy>
 	<Widget id="drawer" src="nl.fokkezb.drawer">
-
 		<Window module="xp.ui" role="leftWindow" id="slider">
 			<TableView id="menu"/>
 		</Window>
 		<NavigationWindow platform="ios" role="centerWindow">
 			<Window id="center">
 				<View id="header" class="horizontal login">
-					<Button onClick="toggleMenu">menu</Button>
+					<ImageView onClick="toggleMenu" id="buttonSlider"/>
 					<Label>QRDEX</Label>
 					<View id="actionView"/>
 				</View>
-				<View id="contentView">
+				<View id="contentView"/>
 			</Window>
 		</NavigationWindow>
-		<View platform="android" role="centerWindow" id="center"/>
+		<View platform="android" role="centerWindow" id="center">
+			<View id="header" class="horizontal login">
+				<ImageView onClick="toggleMenu" id="buttonSlider"/>
+				<Label>QRDEX</Label>
+				<View id="actionView"/>
+			</View>
+			<View id="contentView"/>
+		</View>
 	</Widget>
 </Alloy>

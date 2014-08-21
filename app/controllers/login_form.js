@@ -41,7 +41,7 @@ function showSignup() {
 }
 
 function forgetPasswordAction() {
-	Ti.Platform.openURL("http://qrdex.com/forget");
+	Ti.Platform.openURL("http://37.220.11.236:8081/#/reset-password");
 }
 //
 // Navigation

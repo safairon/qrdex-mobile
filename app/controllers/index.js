@@ -6,9 +6,14 @@ if (! Alloy.Globals.Data.isLoggedIn()) {
 } else { 
 	$.drawer.open();
 	
-	$.menu.setData([profileItem(), contactsItem(), eventsItem(), logoutItem()]);
+	$.menu.setData([profileItem(), contactsItem(), eventsItem(), settingItem(), logoutItem()]);
 	
 	changeCenterView(profileView);
+}
+
+function toggle(e) {
+    var fn = 'toggle' + e.source.title + 'Window';
+    $.drawer[fn]();
 }
 
 function toggleMenu(e){
@@ -16,12 +21,7 @@ function toggleMenu(e){
 }
 
 function changeCenterView(view){
-	// var lastView = $.contentView.children[0];
-	$.drawer.closeLeftWindow();
-	
-	// if(lastView != undefined){
-		// $.contentView.remove(lastView);
-	// }	
+	$.drawer.closeLeftWindow();	
 	$.contentView.add(view);
 }
 

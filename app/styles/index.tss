@@ -23,9 +23,15 @@
 	top:20,
 	left:0,
 	right:10,
+	color:'#332a2f',
 	backgroundColor: 'transparent'
 }
 
 "#header":{
 	width:Ti.UI.FILL
+}
+
+"#buttonSlider":{
+	image:'/image/slider.png',
+	width:15
 }

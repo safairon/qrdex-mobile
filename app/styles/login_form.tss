@@ -5,7 +5,7 @@
 	text:L("manageYourImportantContact"),	
 }
 "#inputBar":{
-	height:84
+	height:82
 }
 "#inputUsername":{
 	hintText:L('username')
