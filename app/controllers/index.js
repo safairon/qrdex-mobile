@@ -15,10 +15,6 @@ function toggleMenu(e){
 	$.drawer.toggleLeftWindow();
 }
 
-Ti.App.addEventListener('openMenu', function(e){
-	$.drawer.toggleLeftWindow();
-});
-
 function changeCenterView(view){
 	// var lastView = $.contentView.children[0];
 	$.drawer.closeLeftWindow();
